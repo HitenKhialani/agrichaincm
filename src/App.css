@@ -1,0 +1,45 @@
+/* Additional app-specific styles */
+.App {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Network visualization specific styles */
+.network-node {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.network-node:hover {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+}
+
+.transaction-line {
+  stroke-dasharray: 5, 5;
+  animation: flow 3s linear infinite;
+}
+
+@keyframes flow {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 20; }
+}
+
+/* Timeline specific styles */
+.timeline-stage {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.timeline-stage:hover {
+  transform: translateX(8px);
+}
+
+.progress-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
